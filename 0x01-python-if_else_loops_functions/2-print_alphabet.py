@@ -1,8 +1,4 @@
 #!/usr/bin/python3
 
-firstChar = 'a'
-lastChar = 'z'
+print('abcdefghijklmnopqrstuvwxyz', end="")
 
-while firstChar <= lastChar:
-    print(firstChar, end="")
-    firstChar = chr(ord(firstChar) + 1)
