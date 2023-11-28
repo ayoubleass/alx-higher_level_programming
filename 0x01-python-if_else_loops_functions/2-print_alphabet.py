@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
-char = 'a'
+firstChar = 'a'
+lastChar = 'z'
 
-print(char)
+while firstChar != lastChar:
+    print(firstChar, end="")
+    firstChar = chr(ord(firstChar) + 1)
+print(lastChar, end="")
