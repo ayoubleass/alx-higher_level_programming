@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "#!/usr/bin/python3\n$PYCODE" > main.py && chmod 777 main.py && ./main.py
+python3 -c "$PYCODE"
