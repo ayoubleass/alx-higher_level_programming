@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    word = "fizzbuzz"
+    word = "FizzBuzz"
     for i in range(1, 101):
         if i % 15 == 0:
             print("{} ".format(word), end="")
