@@ -1,5 +1,6 @@
 #!/usr/bin/python
 """
+This module defines the Square class.
 """
 
 
