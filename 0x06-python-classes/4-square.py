@@ -4,6 +4,13 @@ This module defines the Square class.
 """
 
 
+def raiseError(size):
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
+
+
 class Square:
     """
     Initializes a new instance of the Square class.
@@ -11,18 +18,12 @@ class Square:
     """
 
     def __init__(self, size=0):
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        raiseError(size)
         self.size = size
 
     def area(self):
         """
         Returns the current square area
         """
-        if not isinstance(self.size, int):
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
+        raiseError(self.size)
         return self.size * self.size
