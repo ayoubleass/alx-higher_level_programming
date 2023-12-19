@@ -21,6 +21,16 @@ class Square:
         raiseError(size)
         self.size = size
 
+    def size(self):
+        """
+        Getter method to retrieve the size of the square.
+        """
+        return self.__size
+
+    def size(self, value):
+        raiseError(value)
+        self.size = value
+
     def area(self):
         """
         Returns the current square area
