@@ -64,4 +64,6 @@ class Square:
                     j += 1
                 print()
         else:
+            for p in range(0, self.__position):
+                print(" ", end="")
             print()
