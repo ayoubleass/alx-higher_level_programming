@@ -18,15 +18,16 @@ class Square:
     """
 
     def __init__(self, size=0):
-        raiseError(size)
         self.__size = size
 
+    @property
     def size(self):
         """
         Getter method to retrieve the size of the square.
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
         raiseError(value)
         self.__size = value
@@ -35,15 +36,14 @@ class Square:
         """
         Returns the current square area
         """
-        raiseError(self.__size)
         return self.__size * self.__size
 
     def my_print(self):
-        if self.__size  > 0:
+        if self.__size > 0:
             for i in range(0, self.__size):
                 j = 0
                 while j < self.__size:
-                    print("#",end="")
+                    print("#", end="")
                     j += 1
                 print()
         else:
