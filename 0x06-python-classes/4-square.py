@@ -18,22 +18,22 @@ class Square:
     """
 
     def __init__(self, size=0):
-        raiseError(size)
         self.size = size
 
+    @property
     def size(self):
         """
         Getter method to retrieve the size of the square.
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
         raiseError(value)
-        self.size = value
+        self.__size = value
 
     def area(self):
         """
         Returns the current square area
         """
-        raiseError(self.size)
-        return self.size * self.size
+        return self.__size * self.__size
