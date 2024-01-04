@@ -21,37 +21,26 @@ class Rectangle:
         - width (int): The width of the rectangle.
         - height (int): The height of the rectangle.
         """
-        self.handleParams("width", width)
-        self.handleParams("height", height)
         self.height = height
         self.width = width
 
-    def __getattr__(self, name):
-        """
-        Overrides the __getattr__ method
-        to retrieve attributes in a specific way.
+    @property
+    def width(self):
+        return self.__width
 
-        Parameters:
-        - name (str): The name of the attribute.
+    @width.setter
+    def width(self, value):
+        self.handleParams("width", value)
+        self.__width = value
 
-        Returns:
-        - The value of the attribute.
-        """
-        return self.__dict__[f"__{name}"]
+    @property
+    def height(self):
+        return self.__height
 
-    def __setattr__(self, name, value):
-        """
-        Overrides the __setattr__ method to set attributes in a specific way.
-
-        Parameters:
-        - name (str): The name of the attribute.
-        - value: The value to set for the attribute.
-        """
-        if name == "width":
-            self.handleParams(name, value)
-        if name == "height":
-            self.handleParams(name, value)
-        self.__dict__[f"__{name}"] = value
+    @height.setter
+    def height(self, value):
+        self.handleParams("height", value)
+        self.__height = value
 
     def handleParams(self, name, value):
         """
