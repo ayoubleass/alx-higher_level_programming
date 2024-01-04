@@ -50,11 +50,12 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        for i in range(0, self.__height):
-            for num in range(0, self.__width):
-                print("#", end="")
-            if (i < self.__height - 1):
-                print()
+        if slef.__height != 0 or self.__width != 0:
+            for i in range(0, self.__height):
+                for num in range(0, self.__width):
+                    print("#", end="")
+                if (i < self.__height - 1):
+                    print()
         return ""
 
     def handleParams(self, name, value):
