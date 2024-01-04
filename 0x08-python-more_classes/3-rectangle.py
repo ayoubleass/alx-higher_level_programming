@@ -12,8 +12,7 @@ class Rectangle:
     - width (int): The width of the rectangle.
     - height (int): The height of the rectangle.
     """
-
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """
         Initializes a Rectangle object with the specified width and height.
 
@@ -41,6 +40,22 @@ class Rectangle:
     def height(self, value):
         self.handleParams("height", value)
         self.__height = value
+
+    def area(self):
+        return self.__height * self.__width
+
+    def perimeter(self):
+        if self.__height == 0 or self.__width == 0:
+            return 0
+        return 2 * (self.__height + self.__width)
+
+    def __str__(self):
+        for i in range(0, self.__height):
+            for num in range(0, self.__width):
+                print("#", end="")
+            if (i < self.__height - 1):
+                print()
+        return ""
 
     def handleParams(self, name, value):
         """
