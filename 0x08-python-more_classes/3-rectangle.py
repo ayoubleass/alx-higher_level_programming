@@ -50,7 +50,7 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        if slef.__height != 0 or self.__width != 0:
+        if self.__height != 0 or self.__width != 0:
             for i in range(0, self.__height):
                 for num in range(0, self.__width):
                     print("#", end="")
