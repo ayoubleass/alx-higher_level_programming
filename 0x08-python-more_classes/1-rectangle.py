@@ -21,6 +21,8 @@ class Rectangle:
         - width (int): The width of the rectangle.
         - height (int): The height of the rectangle.
         """
+        self.handleParams("width", width)
+        self.handleParams("height", height)
         self.height = height
         self.width = width
 
