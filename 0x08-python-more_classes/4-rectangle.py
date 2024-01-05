@@ -58,6 +58,9 @@ class Rectangle:
                     result += "\n"
         return result
 
+    def __repr__(self):
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
     def handleParams(self, name, value):
         """
         Validates and handles parameters for width and height.
