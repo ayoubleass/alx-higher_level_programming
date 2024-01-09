@@ -21,7 +21,6 @@ def main():
         items = []
     new_list = items + new_list
     save_to_json_file(new_list, "add_item.json")
-    print(new_list)
 
 
 if __name__ == "__main__":
