@@ -5,9 +5,6 @@
 """
 
 
-import json
-
-
 def class_to_json(obj):
     """
     Serialize an object to a dictionary.
@@ -15,4 +12,3 @@ def class_to_json(obj):
 
     if hasattr(obj, '__dict__'):
         return obj.__dict__
-    return json.dumps(obj)
