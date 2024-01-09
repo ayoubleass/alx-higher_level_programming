@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+if __name__ == "__main__":
+
+    from sys import argv
+    save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
+    load_from_json_file = __import__("6-load_from_json_file")
+    .load_from_json_file
+    new_list = argv[1:]
+    try:
+        items = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        items = []
+    new_list = items + new_list
+    save_to_json_file(new_list, "add_item.json")
+    print(new_list)
