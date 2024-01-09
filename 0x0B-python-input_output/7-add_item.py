@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+    This skript  adds all arguments to a Python list,
+    and then save them to a file
+"""
 if __name__ == "__main__":
 
     from sys import argv
