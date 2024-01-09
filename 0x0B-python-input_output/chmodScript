@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$#" -eq 0 ]; then
+    echo "This script needs a filename as a parameter."
+    exit 1  # Exiting with a non-zero status to indicate an error
+fi
+
+filename="$1"
+
+if [ ! -f "$filename" ]; then
+    echo "File '$filename' not found."
+    exit 1  # Exiting with a non-zero status to indicate an error
+fi
+
+chmod +x "$filename"
+echo "Permission changed for '$filename'."
