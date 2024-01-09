@@ -12,6 +12,5 @@ def class_to_json(obj):
     """
     Serialize an object to a dictionary.
     """
-
-    if hasattr(obj, '__dict__'):
-        return obj.__dict__
+    if isinstance(obj, object):
+        return json.dumps(obj.__dict__)
