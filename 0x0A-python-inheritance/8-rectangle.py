@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 """
-    This modeule define Rectangle class
+    This module define Rectangle class
 """
 
+mod = __import__("7-base_geometry")
 
-class Rectangle:
+
+class Rectangle(mod.BaseGeometry):
     """
     This class define Rectangle
     """
