@@ -7,7 +7,9 @@ mod = __import__("9-rectangle")
 
 
 class Square(mod.Rectangle):
-
+    """
+    A class representing a square, which is a special case of a rectangle.
+    """
     def __init__(self, size):
         """
         Initializes a Square instance with a size.
