@@ -107,3 +107,11 @@ class Rectangle(base.Base):
         for num in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
+
+    def __str__(self):
+        """
+        Return a string that contains all the class attr values
+        """
+        return "[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".format(
+                self.id, self.__x,
+                self.__y, self.__width, self.__height)
