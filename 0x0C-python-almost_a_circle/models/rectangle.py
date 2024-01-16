@@ -97,3 +97,13 @@ class Rectangle(base.Base):
         Return: integer
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        prints in stdout the Rectangle instance with the character #
+        """
+        for n in range(self.__y):
+            print('')
+        for num in range(self.__height):
+            print(" " * self.__x, end="")
+            print("#" * self.__width)
