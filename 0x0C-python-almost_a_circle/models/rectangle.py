@@ -9,31 +9,29 @@ from models import base
 
 class Rectangle(base.Base):
     """
-        This class represents a rectangle.
+    This class represents a rectangle.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-            Initializes a Rectangle instance.
+        Initializes a Rectangle instance.
         """
         self.validate("width", width)
         self.validate("height", height)
-        self.validate("x", x)
-        self.validate("y", y)
-        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
         return self.__width
 
     @width.setter
-    def width(self, width):
-        self.validate("width", width)
-        self.__width = width
+    def width(self, value):
+        self.validate("width", value)
+        self.__width = value
 
     @property
     def height(height):
@@ -104,7 +102,6 @@ class Rectangle(base.Base):
                 k = k[len(prefix):]
             rect_att[k] = v
         return rect_att
-
 
     def validate(self, name, value):
         """
