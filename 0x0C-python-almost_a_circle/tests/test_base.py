@@ -22,6 +22,10 @@ class TestBase(unittest.TestCase):
         except TypeError as e:
             self.assertEqual(str(e), "height must be an integer")
 
+    def test_rectangle_validation(self):
+        r = rectangle.Rectangle(10,5, -1, 2, 5)
+        self.fail("x must be >= 0")
+
     def test_rectangle_area(self):
         r = rectangle.Rectangle(3,2)
         self.assertEqual(r.area(), 6)
