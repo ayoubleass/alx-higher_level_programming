@@ -116,11 +116,11 @@ class Rectangle(base.Base):
                 self.id, self.__x,
                 self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, ):
         """
         Updating the attributess with new values.
         """
-        if args:
+        if args and len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
             if len(args) >= 2:
