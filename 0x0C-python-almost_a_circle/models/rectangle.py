@@ -14,14 +14,7 @@ class Rectangle(base.Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Initializes a Rectangle instance.
-
-        Parameters:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-            x (int): The x-coordinate of the rectangle.
-            y (int): The y-coordinate of the rectangle.
-            id (int): The identifier of the rectangle.
+            Initializes a Rectangle instance.
         """
         self.validate("width", width)
         self.validate("height", height)
