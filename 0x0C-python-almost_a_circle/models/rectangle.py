@@ -9,12 +9,18 @@ from models import base
 
 class Rectangle(base.Base):
     """
-    This class represents a rectangle.
+    This class is a rectangle.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         Initializes a Rectangle instance.
+
+        Params:
+            width: integer
+            height: integer
+            x: integer
+            y: integer
         """
         self.validate("width", width)
         self.validate("height", height)
@@ -62,7 +68,9 @@ class Rectangle(base.Base):
 
     def area(self):
         """
-        Return the area of a rectangle
+        Calculate the area of a rectangle
+
+        Return: integer
         """
         return self.__width * self.__height
 
@@ -75,7 +83,7 @@ class Rectangle(base.Base):
 
     def __str__(self):
         """
-        Return a string
+        Return a string that contains all the class attr values
         """
         return "[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".format(
                 self.id, self.__x,
@@ -83,7 +91,7 @@ class Rectangle(base.Base):
 
     def update(self, *args, **kwargs):
         """
-        Updating the attributess 
+        Updating the attributess with new values.
         """
         if len(args) > 0:
             if len(args) >= 1:
