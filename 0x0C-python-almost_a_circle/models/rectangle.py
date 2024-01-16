@@ -9,7 +9,7 @@ from models import base
 
 class Rectangle(base.Base):
     """
-    This class represents a rectangle.
+        This class represents a rectangle.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
