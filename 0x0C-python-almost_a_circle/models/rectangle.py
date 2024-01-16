@@ -74,11 +74,17 @@ class Rectangle(base.Base):
             print("#" * self.__width)
 
     def __str__(self):
+        """
+        Return a string
+        """
         return "[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".format(
                 self.id, self.__x,
                 self.__y, self.__width, self.__height)
 
     def update(self, *args, **kwargs):
+        """
+        Updating the attributess 
+        """
         if len(args) > 0:
             if len(args) >= 1:
                 self.id = args[0]
@@ -95,6 +101,9 @@ class Rectangle(base.Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """
+        Return a dictonary containing all attributes
+        """
         rect_att = dict()
         for k, v in self.__dict__.items():
             if k.startswith("_"):
