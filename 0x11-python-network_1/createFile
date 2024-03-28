@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+if [ "$#" -ne 1 ]
+then
+	echo "Usage: <$0> <Filename>"
+else
+	echo "#!/usr/bin/python3" > "$1"
+	chmod +x "$1"
+fi
+
