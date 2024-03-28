@@ -7,8 +7,8 @@ then
 elif [ "$2" ]
 then
 	cat <<EOF > $1
-		#!/usr/bin/python3
-		\"\"\"$2\"\"\"
+#!/usr/bin/python3
+"""$2"""
 EOF
 	chmod +x "$1"
 else
